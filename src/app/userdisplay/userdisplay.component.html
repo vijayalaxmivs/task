@@ -1,0 +1,87 @@
+<!-- <div class="container-fluid"> -->
+  <app-navbar></app-navbar>
+
+<div class="width">
+    <div class="x">
+      <header class="header">
+       <div class="col-md-3">
+          <h1>Search Employe</h1>
+          <!-- <td><button class="btn btn-info" (click)=" onUserSave(item)" >ADD EMPLOYE</button> -->
+    <input type="text" #f (keyup)="search(f.value)" placeholder="Serch By Employe Name">
+    </div>
+    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">ADD EMPLOYE</button> -->
+     </header>
+    </div>
+    <table class="table" >
+    <thead>
+      <th> EMPLOYE EMAIL</th>
+      <th>EMPLOYE NAME</th>
+      <th>EMPLOYE MOBILE NO</th>
+      <th>ACTION</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arr" >
+        <td>{{item.user_email}}</td>
+        <td>{{item.user_name }}</td>
+        <td>{{item.user_mobile_no| pipe:" NO:"}}</td>
+        <td><button class="btn btn-info" (click)="onUserDelete(item)" >Delete</button>
+        <button class="btn btn-info" (click)="onUserEdit(item)"  >edit</button>
+        </td>
+      </tr>
+    </tbody>
+
+    </table>
+    </div>
+<!-- </div> -->
+<!-- <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title"data-target="#myModal">Modal Header</h4>
+    </div>
+    <div class="modal-body">
+      <!-- <p>Some text in the modal.</p> -->
+      <!-- <app-signup></app-signup> -->
+      <!-- <app-navbar></app-navbar> -->
+<!-- <div class="container">
+    <h1>ADD EMPLOYE</h1>
+  <form (ngSubmit)="onUserSave(f)" #f="ngForm" ></form>
+<form (ngSubmit)="onUserSave(f)" #f="ngForm" >
+    <div class="form-group" >
+      <label>EMPLOYE Email</label>
+      <input name="user_email" required email ngModel #user_email="ngModel"  type="text" class="form-control" placeholder="Enter Email address">
+      <label class="alert alert-danger" *ngIf="user_email.hasError('required') && !user_email.pristine"  >Email is required.</label>
+      <label class="alert alert-danger" *ngIf="user_email.hasError('email') && !user_email.pristine"  >Email is invalid.</label>
+    </div>
+    <div class="form-group" >
+      <label>EMPLOYE Name</label>
+      <input name="user_name" required minlength="5" pattern="[a-zA-Z]*"  ngModel #user_name="ngModel"  type="text" class="form-control" placeholder="Enter Name ">
+      <label class="alert alert-danger" *ngIf="user_name.hasError('required') && !user_name.pristine" >name is required</label>
+      <label class="alert alert-danger" *ngIf="user_name.hasError('minlength') && !user_name.pristine" >min 5 digits</label>
+      <label class="alert alert-danger" *ngIf="user_name.hasError('pattern') && !user_name.pristine" >only char</label>
+    </div>
+    <div class="form-group" >
+      <label>EMPLOYE password</label>
+      <input name="user_password" ngModel type="password" class="form-control" placeholder="Enter password ">
+    </div>
+    <div class="form-group" >
+      <label>EMPLOYE Mobile No</label>
+      <input name="user_mobile_no" ngModel type="text" class="form-control" placeholder="Enter mobile no">
+    </div>
+    <div class="form-group">
+      <button [disabled]="!f.valid" type="submit" class="form-control btn btn-primary" >Save Employe</button>
+    </div>
+  </form>
+</div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+      <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Close</button> -->
+    <!-- </div>
+  </div>
+  </div>
+  </div> --> -->
+
+
